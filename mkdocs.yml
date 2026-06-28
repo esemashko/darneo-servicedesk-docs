@@ -8,26 +8,35 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   language: ru
+  custom_dir: overrides
+  icon:
+    logo: material/headset
   features:
     - navigation.sections
     - navigation.tabs
     - navigation.top
+    - navigation.footer
+    - toc.follow
     - search.highlight
     - search.suggest
+    - search.share
     - content.code.copy
   palette:
     - scheme: default
-      primary: blue
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Темная тема
     - scheme: slate
-      primary: blue
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Светлая тема
+
+extra_css:
+  - assets/stylesheets/extra.css
 
 plugins:
   - search:
@@ -47,6 +56,9 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
   - Главная: index.md
