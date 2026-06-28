@@ -1,0 +1,83 @@
+site_name: Darneo ServiceDesk
+site_description: Пользовательская документация Darneo ServiceDesk
+site_url: https://esemashko.github.io/darneo-servicedesk-docs/
+repo_url: https://github.com/esemashko/darneo-servicedesk-docs
+repo_name: esemashko/darneo-servicedesk-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Темная тема
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+
+plugins:
+  - search:
+      lang:
+        - ru
+        - en
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Главная: index.md
+  - Начало работы:
+      - Обзор раздела: start/index.md
+      - Первый вход: start/first-login.md
+      - Быстрый маршрут: start/quick-tour.md
+  - Интерфейс:
+      - Обзор интерфейса: interface/index.md
+      - Навигация: interface/navigation.md
+      - Поиск и фильтры: interface/search-and-filters.md
+  - Заявки:
+      - Обзор заявок: tickets/index.md
+      - Создание заявки: tickets/create.md
+      - Список заявок: tickets/list.md
+      - Карточка заявки: tickets/card.md
+      - Комментарии: tickets/comments.md
+      - Файлы: tickets/files.md
+      - Статусы: tickets/statuses.md
+  - Типовые сценарии:
+      - Обзор сценариев: workflows/index.md
+      - Обработка обращения: workflows/request-processing.md
+      - Поиск нужной заявки: workflows/find-ticket.md
+      - Передача заявки другому сотруднику: workflows/reassign-ticket.md
+  - Клиенты и объекты:
+      - Обзор раздела: objects/index.md
+      - Клиенты: objects/clients.md
+      - Компании: objects/companies.md
+      - Оборудование: objects/equipment.md
+  - Уведомления: notifications.md
+  - Справка:
+      - Частые вопросы: reference/faq.md
+      - Решение проблем: reference/troubleshooting.md
+      - Глоссарий: reference/glossary.md
