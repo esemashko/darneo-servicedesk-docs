@@ -27,4 +27,11 @@ mkdocs build --strict
 
 ## Публикация
 
-После push в `main` сайт можно публиковать через GitHub Pages. Workflow уже лежит в `.github/workflows/pages.yml`.
+Перед первым запуском нужно включить GitHub Pages в настройках репозитория:
+
+1. Откройте `Settings -> Pages`.
+2. В блоке `Build and deployment` выберите `Source: GitHub Actions`.
+3. Сохраните настройку.
+4. После этого запустите workflow `Deploy documentation` или сделайте push в `main`.
+
+Workflow уже лежит в `.github/workflows/pages.yml`.
