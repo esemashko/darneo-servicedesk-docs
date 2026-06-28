@@ -154,7 +154,7 @@
 }
 
 .md-tabs {
-  border-bottom: 1px solid var(--ds-border);
+  border-bottom: 0;
 }
 
 .md-tabs__list {
