@@ -25,6 +25,21 @@ http://127.0.0.1:8000
 mkdocs build --strict
 ```
 
+## Скриншоты для документации
+
+Скриншоты разделов обслуживания генерируются из локального Storybook фронтенда:
+
+```bash
+cd ../app
+yarn build-storybook
+
+cd ../darneo-servicedesk-docs
+python tools/generate-maintenance-screenshots.py
+```
+
+Скрипт сохраняет только нужные фрагменты интерфейса в
+`docs/assets/screenshots/settings/maintenance/`.
+
 ## Публикация
 
 Перед первым запуском нужно включить GitHub Pages в настройках репозитория:

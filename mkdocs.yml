@@ -88,6 +88,12 @@ nav:
       - Клиенты: objects/clients.md
       - Компании: objects/companies.md
       - Оборудование: objects/equipment.md
+  - Настройки:
+      - Обслуживание оборудования:
+          - Обзор: settings/maintenance/index.md
+          - Контуры обслуживания: settings/maintenance/object.md
+          - Сценарии обслуживания: settings/maintenance/scenario.md
+          - Регламенты обслуживания: settings/maintenance/regulation.md
   - Уведомления: notifications.md
   - Справка:
       - Частые вопросы: reference/faq.md

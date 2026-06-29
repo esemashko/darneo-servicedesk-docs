@@ -219,6 +219,14 @@
   color: inherit;
 }
 
+.ds-screenshot {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-card-child);
+  box-shadow: var(--ds-shadow-xs);
+}
+
 .md-footer-copyright,
 .md-footer-copyright__highlight {
   color: var(--ds-muted);
