@@ -16,7 +16,7 @@ hide:
       заполнить карточку, добавить комментарий, прикрепить файл и передать задачу дальше.
     </p>
     <div class="ds-actions">
-      <a class="md-button md-button--primary" href="start/quick-tour/">Быстрый маршрут</a>
+      <a class="md-button md-button--primary" href="start/first-login/">Первый вход</a>
       <a class="md-button" href="tickets/">Раздел заявок</a>
     </div>
   </div>
@@ -37,7 +37,7 @@ hide:
     <a class="ds-card" href="start/first-login/">
       <span>01</span>
       <strong>Первый вход</strong>
-      <p>Где открыть ServiceDesk и что пользователь видит на первом экране.</p>
+      <p>Где открыть раздел Заявки и что пользователь видит на первом экране.</p>
     </a>
     <a class="ds-card" href="tickets/list/">
       <span>02</span>
