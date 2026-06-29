@@ -233,6 +233,9 @@
 }
 
 .md-typeset p:has(> .ds-screenshot) {
+  box-sizing: border-box;
+  width: fit-content;
+  max-width: 100%;
   margin: 1.35rem 0;
   padding: 0.45rem;
   border: 1px solid var(--ds-screenshot-border);
@@ -246,7 +249,9 @@
 .ds-screenshot {
   display: block;
   box-sizing: border-box;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  height: auto;
   border: 1px solid var(--ds-screenshot-border);
   border-radius: var(--ds-radius-card-child);
   background: var(--ds-screenshot-bg);
