@@ -1,6 +1,6 @@
 # Регламенты обслуживания
 
-Страница: `http://127.0.0.1:8080/helpdesk/settings/maintenance_regulation/`
+Пример адреса страницы: `https://example.com/helpdesk/settings/maintenance_regulation/`
 
 Регламент обслуживания соединяет три вещи:
 

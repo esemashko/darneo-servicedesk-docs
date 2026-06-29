@@ -1,6 +1,6 @@
 # Сценарии обслуживания
 
-Страница: `http://127.0.0.1:8080/helpdesk/settings/maintenance_scenario/`
+Пример адреса страницы: `https://example.com/helpdesk/settings/maintenance_scenario/`
 
 Сценарий обслуживания описывает, какие заявки нужно создать для обслуживания и когда их создавать.
 

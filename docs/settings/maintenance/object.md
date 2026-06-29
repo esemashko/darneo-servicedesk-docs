@@ -1,6 +1,6 @@
 # Контуры обслуживания
 
-Страница: `http://127.0.0.1:8080/helpdesk/settings/maintenance_object/`
+Пример адреса страницы: `https://example.com/helpdesk/settings/maintenance_object/`
 
 Контур обслуживания - это короткий справочник частей или зон оборудования, которые можно обслуживать отдельно.
 
