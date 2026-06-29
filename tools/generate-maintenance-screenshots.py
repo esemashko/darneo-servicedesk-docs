@@ -66,12 +66,12 @@ TARGETS = [
     ),
     ScreenshotTarget(
         story_id="settings-maintenance-scenario-manager--with-scenarios",
-        selector='[data-test="preset-reference"]',
+        selector='.p-message:has([data-test="preset-reference-placeholder"])',
         filename="scenario-placeholders.png",
         click_selector='button[aria-label="Добавить шаг"]',
-        wait_selector='[data-test="preset-reference"]',
+        wait_selector='[data-test="preset-reference-placeholder"]',
         viewport_width=1360,
-        viewport_height=1180,
+        viewport_height=1700,
     ),
     ScreenshotTarget(
         story_id="settings-maintenance-regulation-manager--with-regulations",

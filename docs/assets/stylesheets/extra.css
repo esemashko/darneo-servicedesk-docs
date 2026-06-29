@@ -56,6 +56,10 @@
   --ds-search-bg: oklch(0.945 0.012 75);
   --ds-search-bg-focus: oklch(0.995 0.012 80);
   --ds-shadow: 0 16px 36px rgba(29, 29, 26, 0.06);
+  --ds-screenshot-bg: oklch(0.990 0.012 80);
+  --ds-screenshot-border: oklch(0.780 0.012 75 / 54%);
+  --ds-screenshot-frame: oklch(0.890 0.018 74 / 58%);
+  --ds-screenshot-shadow: 0 1px 2px rgba(29, 29, 26, 0.04), 0 12px 26px rgba(29, 29, 26, 0.07);
 }
 
 [data-md-color-scheme="slate"] {
@@ -98,6 +102,10 @@
   --ds-search-bg: oklch(1 0.005 80 / 16%);
   --ds-search-bg-focus: oklch(1 0.005 80 / 22%);
   --ds-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+  --ds-screenshot-bg: oklch(0.285 0.008 70);
+  --ds-screenshot-border: oklch(1 0.005 80 / 20%);
+  --ds-screenshot-frame: oklch(1 0.005 80 / 10%);
+  --ds-screenshot-shadow: 0 1px 2px rgba(0, 0, 0, 0.18), 0 14px 30px rgba(0, 0, 0, 0.24);
 }
 
 .md-header,
@@ -137,8 +145,7 @@
 
 .md-header__title,
 .md-header__button,
-.md-tabs__link,
-.md-source {
+.md-tabs__link {
   color: inherit;
 }
 
@@ -219,12 +226,31 @@
   color: inherit;
 }
 
+.md-typeset p:has(> .ds-screenshot) {
+  margin: 1.35rem 0;
+  padding: 0.45rem;
+  border: 1px solid var(--ds-screenshot-border);
+  border-radius: calc(var(--ds-radius-card-inner) + 0.2rem);
+  background: var(--ds-screenshot-frame);
+  box-shadow: var(--ds-screenshot-shadow);
+  line-height: 0;
+  overflow: hidden;
+}
+
 .ds-screenshot {
   display: block;
+  box-sizing: border-box;
   width: 100%;
-  border: 1px solid var(--ds-border);
+  border: 1px solid var(--ds-screenshot-border);
   border-radius: var(--ds-radius-card-child);
-  box-shadow: var(--ds-shadow-xs);
+  background: var(--ds-screenshot-bg);
+  box-shadow: none;
+  clip-path: inset(0 round var(--ds-radius-card-child));
+  overflow: hidden;
+}
+
+.md-typeset p:has(> .ds-screenshot) > .ds-screenshot {
+  margin: 0;
 }
 
 .md-footer-copyright,
@@ -339,22 +365,53 @@
 
 .md-sidebar--primary .md-nav__item--nested > label.md-nav__link {
   margin-top: 0.42rem;
-  border: 1px solid var(--ds-border);
-  border-left: 3px solid var(--ds-active-border);
-  background: var(--ds-surface-muted);
+  margin-bottom: 0.08rem;
+  padding: 0.42rem 0.55rem;
+  border: 0;
+  border-radius: var(--ds-radius-button);
+  background: transparent;
   color: var(--ds-text);
-  font-size: 0.69rem;
-  font-weight: 750;
+  font-size: 0.74rem;
+  font-weight: 720;
 }
 
 .md-sidebar--primary .md-nav__item--nested > label.md-nav__link .md-nav__icon {
   color: var(--ds-accent-strong);
-  opacity: 0.78;
+  opacity: 0.72;
 }
 
 .md-sidebar--primary .md-nav__item--nested > label.md-nav__link:is(:hover, :focus) {
-  background: var(--ds-active-bg);
+  background: var(--ds-surface-muted);
   color: var(--ds-accent-strong);
+}
+
+.md-sidebar--primary .md-nav__item--nested > .md-nav a.md-nav__link {
+  position: relative;
+  padding-left: 1.08rem;
+  color: var(--ds-muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.md-sidebar--primary .md-nav__item--nested > .md-nav a.md-nav__link::before {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  width: 0.22rem;
+  height: 0.22rem;
+  border-radius: var(--ds-radius-pill);
+  background: color-mix(in srgb, var(--ds-muted) 48%, transparent);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.md-sidebar--primary .md-nav__item--nested > .md-nav a.md-nav__link--active {
+  color: var(--ds-accent-strong);
+  font-weight: 700;
+}
+
+.md-sidebar--primary .md-nav__item--nested > .md-nav a.md-nav__link--active::before {
+  background: var(--ds-accent-strong);
 }
 
 .md-sidebar .md-nav__link::before,
@@ -487,11 +544,20 @@
 
   .md-nav--primary .md-nav__item--nested > label.md-nav__link {
     min-height: 42px;
-    border-width: 0 0 0 3px;
-    border-left-color: var(--ds-active-border);
-    background: var(--ds-surface-muted);
-    font-size: 13px;
-    font-weight: 750;
+    padding: 11px 18px;
+    border: 0;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 720;
+  }
+
+  .md-nav--primary .md-nav__item--nested > .md-nav a.md-nav__link {
+    padding-left: 30px;
+    font-size: 14px;
+  }
+
+  .md-nav--primary .md-nav__item--nested > .md-nav a.md-nav__link::before {
+    left: 18px;
   }
 
   .md-nav--primary .md-nav__link > .md-nav__icon.md-icon {

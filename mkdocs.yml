@@ -1,9 +1,6 @@
 site_name: Darneo ServiceDesk
 site_description: Пользовательская документация Darneo ServiceDesk
 site_url: https://esemashko.github.io/darneo-servicedesk-docs/
-repo_url: https://github.com/esemashko/darneo-servicedesk-docs
-repo_name: esemashko/darneo-servicedesk-docs
-edit_uri: edit/main/docs/
 
 theme:
   name: material

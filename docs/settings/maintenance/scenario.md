@@ -10,7 +10,7 @@
 
 Слева находится список сценариев. Справа отображается выбранный сценарий и его шаги.
 
-![Сценарий обслуживания и шаги](../../assets/screenshots/settings/maintenance/scenario-steps.png){ .ds-screenshot }
+![Сценарий обслуживания и шаги](/darneo-servicedesk-docs/assets/screenshots/settings/maintenance/scenario-steps.png){ .ds-screenshot }
 
 Шаг - это будущая заявка. Например, один шаг может создать заявку на согласование даты, второй - заявку на выполнение работы.
 
@@ -18,7 +18,7 @@
 
 В шаге задается дата, от которой считать создание заявки, сдвиг по времени и данные будущей заявки.
 
-![Форма шага сценария](../../assets/screenshots/settings/maintenance/scenario-step-form.png){ .ds-screenshot }
+![Форма шага сценария](/darneo-servicedesk-docs/assets/screenshots/settings/maintenance/scenario-step-form.png){ .ds-screenshot }
 
 Пример: если нужно создать заявку за 3 дня до начала обслуживания, выбирают дату начала обслуживания, направление «до» и значение 3 дня.
 
@@ -26,7 +26,7 @@
 
 В названии и описании заявки можно использовать переменные. При создании заявки система заменит их реальными значениями.
 
-![Переменные для заявки](../../assets/screenshots/settings/maintenance/scenario-placeholders.png){ .ds-screenshot }
+![Переменные для заявки](/darneo-servicedesk-docs/assets/screenshots/settings/maintenance/scenario-placeholders.png){ .ds-screenshot }
 
 Пример: текст **Проверить {{regulation.title}}** в заявке превратится в понятное название выбранного регламента.
 
