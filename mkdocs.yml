@@ -88,6 +88,7 @@ nav:
   - Настройки:
       - Заявки:
           - Автоматизация:
+              - Маршрутизация заявок: settings/tickets/automation/ticket-routing/index.md
               - Плановые заявки: settings/tickets/automation/ticket-schedule/index.md
       - Оборудование:
           - Справочники:
