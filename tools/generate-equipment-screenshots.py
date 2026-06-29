@@ -23,14 +23,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 WORKSPACE_DIR = ROOT_DIR.parent
 STORYBOOK_DIR = WORKSPACE_DIR / "app" / "storybook-static"
 OUTPUT_DIR = (
-    ROOT_DIR
-    / "docs"
-    / "assets"
-    / "screenshots"
-    / "settings"
-    / "tickets"
-    / "automation"
-    / "ticket-schedule"
+    ROOT_DIR / "docs" / "assets" / "screenshots" / "settings" / "equipment" / "dictionaries"
 )
 
 
@@ -47,20 +40,43 @@ class ScreenshotTarget:
 
 TARGETS = [
     ScreenshotTarget(
-        story_id="settings-ticket-schedule-manager--with-schedules",
-        selector='[data-test="ticket-schedule-manager"]',
-        filename="list.png",
-        viewport_width=1360,
-        viewport_height=760,
+        story_id="settings-equipment-type-equipment-type--with-types",
+        selector='[data-test="equipment-type-manager"]',
+        filename="type-list.png",
     ),
     ScreenshotTarget(
-        story_id="settings-ticket-schedule-manager--with-schedules",
+        story_id="settings-equipment-type-equipment-type--with-types",
         selector=".p-dialog",
-        filename="form.png",
+        filename="type-form.png",
         click_selector="button:has(.pi-pencil)",
         wait_selector=".p-dialog",
+    ),
+    ScreenshotTarget(
+        story_id="settings-equipment-manufacturer-equipment-manufacturer--with-manufacturers",
+        selector='[data-test="equipment-manufacturer-manager"]',
+        filename="manufacturer-list.png",
+    ),
+    ScreenshotTarget(
+        story_id="settings-equipment-manufacturer-equipment-manufacturer--with-manufacturers",
+        selector=".p-dialog",
+        filename="manufacturer-form.png",
+        click_selector="button:has(.pi-pencil)",
+        wait_selector=".p-dialog",
+    ),
+    ScreenshotTarget(
+        story_id="settings-equipment-model-equipment-model--with-models",
+        selector='[data-test="equipment-model-manager"]',
+        filename="model-list.png",
         viewport_width=1360,
-        viewport_height=1800,
+    ),
+    ScreenshotTarget(
+        story_id="settings-equipment-model-equipment-model--with-models",
+        selector=".p-dialog",
+        filename="model-form.png",
+        click_selector="button:has(.pi-pencil)",
+        wait_selector=".p-dialog",
+        viewport_width=1280,
+        viewport_height=980,
     ),
 ]
 
@@ -95,22 +111,6 @@ def wait_for_server(port: int) -> None:
                 return
         time.sleep(0.1)
     raise RuntimeError("Storybook static server did not start in time.")
-
-
-def mock_ajax(page: Page) -> None:
-    page.route(
-        "**/bitrix/services/main/ajax.php**",
-        lambda route: route.fulfill(
-            status=200,
-            content_type="application/json",
-            body=(
-                '{"status":"success","data":{"staff":['
-                '{"id":7,"title":"Иван Иванов"},'
-                '{"id":8,"title":"Мария Соколова"}'
-                ']},"errors":[]}'
-            ),
-        ),
-    )
 
 
 def prepare_page(page: Page, base_url: str, target: ScreenshotTarget) -> None:
@@ -175,7 +175,6 @@ def main() -> int:
         with sync_playwright() as playwright:
             browser = playwright.chromium.launch()
             page = browser.new_page()
-            mock_ajax(page)
             for target in TARGETS:
                 capture_target(page, base_url, target)
             browser.close()

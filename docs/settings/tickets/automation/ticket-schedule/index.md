@@ -10,7 +10,7 @@
 
 В списке видны правила плановых заявок. Для каждого правила показаны название, заголовок будущей заявки, повторение, контекст запуска, следующий запуск и статус.
 
-![Список плановых заявок](/darneo-servicedesk-docs/assets/screenshots/settings/ticket-schedule/list.png){ .ds-screenshot }
+![Список плановых заявок](/darneo-servicedesk-docs/assets/screenshots/settings/tickets/automation/ticket-schedule/list.png){ .ds-screenshot }
 
 Контекст запуска показывает, к какой компании, клиенту, договору, объекту обслуживания или оборудованию относится правило. Когда система создаст заявку, эти данные будут подставлены в карточку заявки.
 
@@ -20,7 +20,7 @@
 
 В форме задают расписание и шаблон будущей заявки.
 
-![Форма плановой заявки](/darneo-servicedesk-docs/assets/screenshots/settings/ticket-schedule/form.png){ .ds-screenshot }
+![Форма плановой заявки](/darneo-servicedesk-docs/assets/screenshots/settings/tickets/automation/ticket-schedule/form.png){ .ds-screenshot }
 
 Основные поля формы:
 

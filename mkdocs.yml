@@ -86,12 +86,20 @@ nav:
       - Компании: objects/companies.md
       - Оборудование: objects/equipment.md
   - Настройки:
-      - Плановые заявки: settings/ticket-schedule.md
-      - Обслуживание оборудования:
-          - Обзор: settings/maintenance/index.md
-          - Контуры обслуживания: settings/maintenance/object.md
-          - Сценарии обслуживания: settings/maintenance/scenario.md
-          - Регламенты обслуживания: settings/maintenance/regulation.md
+      - Заявки:
+          - Автоматизация:
+              - Плановые заявки: settings/tickets/automation/ticket-schedule/index.md
+      - Оборудование:
+          - Справочники:
+              - Обзор: settings/equipment/dictionaries/index.md
+              - Типы оборудования: settings/equipment/dictionaries/type.md
+              - Производители: settings/equipment/dictionaries/manufacturer.md
+              - Модели оборудования: settings/equipment/dictionaries/model.md
+          - Плановое обслуживание:
+              - Обзор: settings/maintenance/index.md
+              - Контуры обслуживания: settings/maintenance/object.md
+              - Сценарии обслуживания: settings/maintenance/scenario.md
+              - Регламенты обслуживания: settings/maintenance/regulation.md
   - Уведомления: notifications.md
   - Справка:
       - Частые вопросы: reference/faq.md
