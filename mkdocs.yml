@@ -87,6 +87,11 @@ nav:
       - Оборудование: objects/equipment.md
   - Настройки:
       - Заявки:
+          - Справочники:
+              - Обзор: settings/tickets/dictionaries/index.md
+              - Типы заявок: settings/tickets/dictionaries/type.md
+              - Приоритеты: settings/tickets/dictionaries/priority.md
+              - Статусы: settings/tickets/dictionaries/status.md
           - Автоматизация:
               - Маршрутизация заявок: settings/tickets/automation/ticket-routing/index.md
               - Плановые заявки: settings/tickets/automation/ticket-schedule/index.md
