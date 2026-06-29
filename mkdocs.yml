@@ -90,6 +90,10 @@ nav:
           - Автоматизация:
               - Маршрутизация заявок: settings/tickets/automation/ticket-routing/index.md
               - Плановые заявки: settings/tickets/automation/ticket-schedule/index.md
+          - SLA:
+              - Обзор: settings/tickets/sla/index.md
+              - SLA правила: settings/tickets/sla/rule.md
+              - Графики работы: settings/tickets/sla/schedule.md
       - Оборудование:
           - Справочники:
               - Обзор: settings/equipment/dictionaries/index.md
