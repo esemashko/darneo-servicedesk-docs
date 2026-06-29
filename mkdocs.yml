@@ -121,6 +121,7 @@ nav:
               - Отделы: settings/staff/organization/department.md
           - Доступ:
               - Ограничения сотрудников: settings/staff/access/restrictions.md
+              - Права доступа: settings/staff/access/permission.md
   - Уведомления: notifications.md
   - Справка:
       - Частые вопросы: reference/faq.md

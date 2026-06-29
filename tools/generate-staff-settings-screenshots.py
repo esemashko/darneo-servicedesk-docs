@@ -99,6 +99,38 @@ TARGETS = [
         viewport_width=980,
         viewport_height=520,
     ),
+    ScreenshotTarget(
+        story_id="settings-main-permission-permission--with-permissions",
+        selector='[data-test="permission-page"] .p-datatable',
+        output_path=ROOT_DIR
+        / "docs"
+        / "assets"
+        / "screenshots"
+        / "settings"
+        / "staff"
+        / "access"
+        / "permission"
+        / "list.png",
+        viewport_width=1500,
+        viewport_height=980,
+    ),
+    ScreenshotTarget(
+        story_id="settings-main-permission-permission--with-permissions",
+        selector=".p-dialog",
+        output_path=ROOT_DIR
+        / "docs"
+        / "assets"
+        / "screenshots"
+        / "settings"
+        / "staff"
+        / "access"
+        / "permission"
+        / "fields.png",
+        click_selector='[data-test="permission-page"] button:has-text("Поля")',
+        wait_selector='.p-dialog:has-text("Доступ к полям")',
+        viewport_width=1360,
+        viewport_height=1100,
+    ),
 ]
 
 
