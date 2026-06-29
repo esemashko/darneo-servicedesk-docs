@@ -61,6 +61,7 @@ nav:
   - Главная: index.md
   - Начало работы:
       - Обзор раздела: start/index.md
+      - Установка решения: start/installation.md
       - Первый вход: start/first-login.md
       - Быстрый маршрут: start/quick-tour.md
   - Интерфейс:
