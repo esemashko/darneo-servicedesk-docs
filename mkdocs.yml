@@ -86,6 +86,7 @@ nav:
       - Компании: objects/companies.md
       - Оборудование: objects/equipment.md
   - Настройки:
+      - Плановые заявки: settings/ticket-schedule.md
       - Обслуживание оборудования:
           - Обзор: settings/maintenance/index.md
           - Контуры обслуживания: settings/maintenance/object.md
