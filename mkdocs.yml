@@ -87,6 +87,8 @@ nav:
       - Оборудование: objects/equipment.md
   - Настройки:
       - Заявки:
+          - Общие:
+              - Оповещения: settings/tickets/general/notify.md
           - Поля и интерфейс:
               - Дополнительные поля: settings/tickets/fields/property.md
               - Вкладки заявок: settings/tickets/fields/ticket-tabs.md
