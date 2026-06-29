@@ -88,6 +88,7 @@ nav:
   - Настройки:
       - Заявки:
           - Общие:
+              - Настройки модуля: settings/tickets/general/main.md
               - Оповещения: settings/tickets/general/notify.md
           - Поля и интерфейс:
               - Дополнительные поля: settings/tickets/fields/property.md
