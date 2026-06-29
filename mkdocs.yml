@@ -122,6 +122,9 @@ nav:
           - Доступ:
               - Ограничения сотрудников: settings/staff/access/restrictions.md
               - Права доступа: settings/staff/access/permission.md
+      - Интеграции:
+          - Каналы:
+              - Email: settings/integration/channels/mail.md
   - Уведомления: notifications.md
   - Справка:
       - Частые вопросы: reference/faq.md
