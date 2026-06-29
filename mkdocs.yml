@@ -88,6 +88,7 @@ nav:
   - Настройки:
       - Заявки:
           - Поля и интерфейс:
+              - Дополнительные поля: settings/tickets/fields/property.md
               - Вкладки заявок: settings/tickets/fields/ticket-tabs.md
           - Справочники:
               - Обзор: settings/tickets/dictionaries/index.md
