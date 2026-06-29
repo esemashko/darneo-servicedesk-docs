@@ -55,6 +55,9 @@
   --ds-on-accent: var(--ds-primary-fg);
   --ds-search-bg: oklch(0.945 0.012 75);
   --ds-search-bg-focus: oklch(0.995 0.012 80);
+  --ds-nav-group-bg: color-mix(in oklch, var(--ds-primary) 11%, var(--ds-surface));
+  --ds-nav-group-border: color-mix(in oklch, var(--ds-primary) 24%, var(--ds-border));
+  --ds-nav-group-fg: var(--ds-text);
   --ds-shadow: 0 16px 36px rgba(29, 29, 26, 0.06);
   --ds-screenshot-bg: oklch(0.990 0.012 80);
   --ds-screenshot-border: oklch(0.780 0.012 75 / 54%);
@@ -101,6 +104,9 @@
   --ds-on-accent: var(--ds-primary-fg);
   --ds-search-bg: oklch(1 0.005 80 / 16%);
   --ds-search-bg-focus: oklch(1 0.005 80 / 22%);
+  --ds-nav-group-bg: color-mix(in oklch, var(--ds-primary) 12%, var(--ds-surface));
+  --ds-nav-group-border: color-mix(in oklch, var(--ds-primary) 30%, var(--ds-border));
+  --ds-nav-group-fg: var(--ds-text);
   --ds-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
   --ds-screenshot-bg: oklch(0.285 0.008 70);
   --ds-screenshot-border: oklch(1 0.005 80 / 20%);
@@ -385,6 +391,37 @@
   color: var(--ds-accent-strong);
 }
 
+.md-sidebar--primary
+  .md-nav--primary
+  > .md-nav__list
+  > .md-nav__item--active
+  > .md-nav
+  > .md-nav__list
+  > .md-nav__item--section
+  > label.md-nav__link {
+  margin: 0.62rem 0.26rem 0.24rem -0.26rem;
+  padding: 0.5rem 0.62rem;
+  border: 1px solid var(--ds-nav-group-border);
+  border-radius: var(--ds-radius-card-child);
+  background: var(--ds-nav-group-bg);
+  color: var(--ds-nav-group-fg);
+  font-size: 0.75rem;
+  font-weight: 760;
+}
+
+.md-sidebar--primary
+  .md-nav--primary
+  > .md-nav__list
+  > .md-nav__item--active
+  > .md-nav
+  > .md-nav__list
+  > .md-nav__item--section
+  > label.md-nav__link:is(:hover, :focus) {
+  border-color: var(--ds-active-border);
+  background: var(--ds-active-bg);
+  color: var(--ds-accent-strong);
+}
+
 .md-sidebar--primary .md-nav__item--nested > .md-nav a.md-nav__link {
   position: relative;
   padding-left: 1.08rem;
@@ -549,6 +586,23 @@
     background: transparent;
     font-size: 14px;
     font-weight: 720;
+  }
+
+  .md-sidebar--primary
+    .md-nav--primary
+    > .md-nav__list
+    > .md-nav__item--active
+    > .md-nav
+    > .md-nav__list
+    > .md-nav__item--section
+    > label.md-nav__link {
+    min-height: 44px;
+    margin: 8px 12px 4px;
+    padding: 11px 14px;
+    border: 1px solid var(--ds-nav-group-border);
+    border-radius: var(--ds-radius-card-child);
+    background: var(--ds-nav-group-bg);
+    font-size: 14px;
   }
 
   .md-nav--primary .md-nav__item--nested > .md-nav a.md-nav__link {
