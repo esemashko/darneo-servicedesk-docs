@@ -66,12 +66,14 @@ nav:
   - Интерфейс:
       - Обзор интерфейса: interface/index.md
       - Навигация: interface/navigation.md
+      - Списки и таблицы: interface/lists-and-tables.md
+      - Вкладки и колонки: interface/tabs-and-columns.md
       - Поиск и фильтры: interface/search-and-filters.md
   - Заявки:
       - Обзор заявок: tickets/index.md
-      - Создание заявки: tickets/create.md
       - Список заявок: tickets/list.md
       - Карточка заявки: tickets/card.md
+      - Создание заявки: tickets/create.md
       - Комментарии: tickets/comments.md
       - Файлы: tickets/files.md
       - Статусы: tickets/statuses.md
