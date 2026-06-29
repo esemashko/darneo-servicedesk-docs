@@ -399,8 +399,8 @@
   > .md-nav__list
   > .md-nav__item--section
   > label.md-nav__link {
-  margin: 0.62rem 0.26rem 0.24rem -0.26rem;
-  padding: 0.5rem 0.62rem;
+  margin: 0.62rem 0.35rem 0.24rem -0.35rem;
+  padding: 0.5rem 0.55rem;
   border: 1px solid var(--ds-nav-group-border);
   border-radius: var(--ds-radius-card-child);
   background: var(--ds-nav-group-bg);
@@ -598,7 +598,7 @@
     > label.md-nav__link {
     min-height: 44px;
     margin: 8px 12px 4px;
-    padding: 11px 14px;
+    padding: 11px 6px;
     border: 1px solid var(--ds-nav-group-border);
     border-radius: var(--ds-radius-card-child);
     background: var(--ds-nav-group-bg);
