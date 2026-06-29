@@ -116,6 +116,11 @@ nav:
               - Контуры обслуживания: settings/maintenance/object.md
               - Сценарии обслуживания: settings/maintenance/scenario.md
               - Регламенты обслуживания: settings/maintenance/regulation.md
+      - Сотрудники:
+          - Организация:
+              - Отделы: settings/staff/organization/department.md
+          - Доступ:
+              - Ограничения сотрудников: settings/staff/access/restrictions.md
   - Уведомления: notifications.md
   - Справка:
       - Частые вопросы: reference/faq.md
