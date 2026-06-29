@@ -87,6 +87,8 @@ nav:
       - Оборудование: objects/equipment.md
   - Настройки:
       - Заявки:
+          - Поля и интерфейс:
+              - Вкладки заявок: settings/tickets/fields/ticket-tabs.md
           - Справочники:
               - Обзор: settings/tickets/dictionaries/index.md
               - Типы заявок: settings/tickets/dictionaries/type.md
