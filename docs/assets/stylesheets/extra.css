@@ -260,8 +260,88 @@
   overflow: hidden;
 }
 
+.ds-screenshot:focus-visible {
+  outline: 3px solid var(--ds-focus-ring);
+  outline-offset: 3px;
+}
+
 .md-typeset p:has(> .ds-screenshot) > .ds-screenshot {
   margin: 0;
+}
+
+.ds-screenshot-lightbox-open {
+  overflow: hidden;
+}
+
+.ds-screenshot-lightbox {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  background: rgba(19, 18, 16, 0.74);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ds-screenshot-lightbox[data-open="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ds-screenshot-lightbox__figure {
+  display: flex;
+  width: min(100%, 96rem);
+  max-height: calc(100vh - clamp(2rem, 6vw, 5rem));
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.ds-screenshot-lightbox__image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - clamp(5.5rem, 9vw, 8rem));
+  margin: 0 auto;
+  border: 1px solid color-mix(in oklch, white 35%, transparent);
+  border-radius: var(--ds-radius-card-child);
+  background: var(--ds-screenshot-bg);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+  object-fit: contain;
+}
+
+.ds-screenshot-lightbox__caption {
+  color: oklch(0.985 0.012 80);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.ds-screenshot-lightbox__close {
+  position: fixed;
+  top: max(0.75rem, env(safe-area-inset-top));
+  right: max(0.75rem, env(safe-area-inset-right));
+  display: inline-flex;
+  width: 2.35rem;
+  height: 2.35rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in oklch, white 26%, transparent);
+  border-radius: var(--ds-radius-button);
+  background: rgba(19, 18, 16, 0.82);
+  color: white;
+  font: inherit;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.ds-screenshot-lightbox__close:is(:hover, :focus-visible) {
+  background: rgba(19, 18, 16, 0.96);
+  outline: 3px solid color-mix(in oklch, white 34%, transparent);
+  outline-offset: 2px;
 }
 
 .md-footer-copyright,
