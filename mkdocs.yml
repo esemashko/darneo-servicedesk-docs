@@ -79,6 +79,7 @@ nav:
       - Статусы: tickets/statuses.md
   - Типовые сценарии:
       - Обзор сценариев: workflows/index.md
+      - Сценарии использования Helpdesk: workflows/use-cases.md
       - Обработка обращения: workflows/request-processing.md
       - Поиск нужной заявки: workflows/find-ticket.md
       - Передача заявки другому сотруднику: workflows/reassign-ticket.md
