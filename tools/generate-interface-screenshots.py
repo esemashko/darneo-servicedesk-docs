@@ -119,6 +119,14 @@ TARGETS = [
         viewport_width=1500,
         viewport_height=900,
     ),
+    ScreenshotTarget(
+        story_id="app-ticket-create-ticketcreate--filled",
+        selector='[data-test="ticket-create-story"] form',
+        filename="ticket-create-form.png",
+        wait_selector='[data-test="ticket-create-story"] form:has-text("Создать")',
+        viewport_width=1500,
+        viewport_height=1250,
+    ),
 ]
 
 
