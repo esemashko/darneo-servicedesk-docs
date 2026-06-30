@@ -63,12 +63,10 @@ nav:
       - Обзор раздела: start/index.md
       - Установка решения: start/installation.md
       - Первый вход: start/first-login.md
-  - Интерфейс:
-      - Обзор интерфейса: interface/index.md
-      - Навигация: interface/navigation.md
-      - Списки и таблицы: interface/lists-and-tables.md
-      - Вкладки и колонки: interface/tabs-and-columns.md
-      - Поиск и фильтры: interface/search-and-filters.md
+      - Справка:
+          - Частые вопросы: reference/faq.md
+          - Решение проблем: reference/troubleshooting.md
+          - Глоссарий: reference/glossary.md
   - Заявки:
       - Обзор заявок: tickets/index.md
       - Список заявок: tickets/list.md
@@ -77,17 +75,28 @@ nav:
       - Комментарии: tickets/comments.md
       - Файлы: tickets/files.md
       - Статусы: tickets/statuses.md
+  - Клиенты и объекты:
+      - Обзор раздела: objects/index.md
+      - Контакты: objects/clients.md
+      - Компании: objects/companies.md
+      - Договоры: objects/contracts.md
+      - Объекты обслуживания: objects/service-objects.md
+      - Оборудование: objects/equipment.md
   - Типовые сценарии:
       - Обзор сценариев: workflows/index.md
       - Сценарии использования Helpdesk: workflows/use-cases.md
       - Обработка обращения: workflows/request-processing.md
       - Поиск нужной заявки: workflows/find-ticket.md
       - Передача заявки другому сотруднику: workflows/reassign-ticket.md
-  - Клиенты и объекты:
-      - Обзор раздела: objects/index.md
-      - Клиенты: objects/clients.md
-      - Компании: objects/companies.md
-      - Оборудование: objects/equipment.md
+  - Уведомления:
+      - Обзор: notifications/index.md
+      - Настройка каналов: notifications/channel-settings.md
+  - Интерфейс:
+      - Обзор интерфейса: interface/index.md
+      - Навигация: interface/navigation.md
+      - Списки и таблицы: interface/lists-and-tables.md
+      - Вкладки и колонки: interface/tabs-and-columns.md
+      - Поиск и фильтры: interface/search-and-filters.md
   - Настройки:
       - Заявки:
           - Общие:
@@ -128,10 +137,3 @@ nav:
       - Интеграции:
           - Каналы:
               - Email: settings/integration/channels/mail.md
-  - Уведомления:
-      - Обзор: notifications/index.md
-      - Настройка каналов: notifications/channel-settings.md
-  - Справка:
-      - Частые вопросы: reference/faq.md
-      - Решение проблем: reference/troubleshooting.md
-      - Глоссарий: reference/glossary.md
