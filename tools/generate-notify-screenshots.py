@@ -55,6 +55,47 @@ TARGETS = [
         viewport_width=1360,
         viewport_height=1100,
     ),
+    ScreenshotTarget(
+        story_id="settings-main-notify-notifytable--default",
+        selector=".p-dialog",
+        filename="email-settings.png",
+        click_selector='thead th:has-text("Email") button[aria-label="Настроить"]',
+        wait_selector='.p-dialog:has-text("Заголовок письма")',
+        viewport_width=900,
+        viewport_height=560,
+    ),
+    ScreenshotTarget(
+        story_id="settings-main-notify-notifytable--default",
+        selector=".p-dialog",
+        filename="sms-settings.png",
+        click_selector='thead th:has-text("SMS") button[aria-label="Настроить"]',
+        wait_selector='.p-dialog:has-text("API ключ sms.ru")',
+        viewport_width=900,
+        viewport_height=660,
+    ),
+    ScreenshotTarget(
+        story_id="settings-main-notify-notifytable--default",
+        selector=".p-dialog",
+        filename="telegram-settings.png",
+        click_selector='thead th:has-text("Telegram") button[aria-label="Настроить"]',
+        wait_selector='.p-dialog:has-text("Token Telegram-бота")',
+        viewport_width=900,
+        viewport_height=560,
+    ),
+    ScreenshotTarget(
+        story_id="max-maxsettingspanel--connected",
+        selector="#storybook-root",
+        filename="max-settings.png",
+        viewport_width=1180,
+        viewport_height=920,
+    ),
+    ScreenshotTarget(
+        story_id="max-maxbindingpanel--pending",
+        selector="#storybook-root",
+        filename="max-binding.png",
+        viewport_width=940,
+        viewport_height=560,
+    ),
 ]
 
 
@@ -88,8 +129,6 @@ def wait_for_server(port: int) -> None:
                 return
         time.sleep(0.1)
     raise RuntimeError("Storybook static server did not start in time.")
-
-
 def prepare_page(page: Page, base_url: str, target: ScreenshotTarget) -> None:
     page.set_viewport_size({"width": target.viewport_width, "height": target.viewport_height})
     page.goto(f"{base_url}/iframe.html?id={target.story_id}&viewMode=story")

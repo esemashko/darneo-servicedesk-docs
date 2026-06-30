@@ -128,7 +128,9 @@ nav:
       - Интеграции:
           - Каналы:
               - Email: settings/integration/channels/mail.md
-  - Уведомления: notifications.md
+  - Уведомления:
+      - Обзор: notifications/index.md
+      - Настройка каналов: notifications/channel-settings.md
   - Справка:
       - Частые вопросы: reference/faq.md
       - Решение проблем: reference/troubleshooting.md
