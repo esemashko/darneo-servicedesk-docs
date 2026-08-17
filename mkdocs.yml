@@ -65,6 +65,7 @@ nav:
   - Начало работы:
       - Обзор раздела: start/index.md
       - Установка решения: start/installation.md
+      - Мобильное приложение: start/mobile-application.md
       - Первый вход: start/first-login.md
       - Справка:
           - Частые вопросы: reference/faq.md
