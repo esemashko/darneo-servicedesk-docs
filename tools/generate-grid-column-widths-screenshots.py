@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Capture only the production column-width dialog from a built Storybook."""
+"""Capture the existing column-settings drawer with its integrated size fields."""
 from __future__ import annotations
 
 import argparse
@@ -28,15 +28,13 @@ def main() -> None:
         with sync_playwright() as playwright:
             browser = playwright.chromium.launch()
             try:
-                page = browser.new_page(viewport={'width': 1440, 'height': 1000}, device_scale_factor=1)
-                page.goto(f'http://127.0.0.1:{server.server_port}/iframe.html?id=table-grid-column-widths--locked-system-tab&viewMode=story')
+                page = browser.new_page(viewport={'width': 1440, 'height': 1100}, device_scale_factor=1)
+                page.goto(f'http://127.0.0.1:{server.server_port}/iframe.html?id=table-grid-column-widths--open-editor&viewMode=story')
                 page.add_style_tag(content='*, *::before, *::after { animation: none !important; transition: none !important; }')
-                page.get_by_role('button', name='Ширина столбцов', exact=True).click()
-                dialog = page.get_by_role('dialog', name='Ширина столбцов', exact=True)
+                dialog = page.get_by_role('dialog', name='Колонки списка', exact=True)
                 dialog.wait_for(state='visible')
-                dialog.get_by_role('spinbutton').nth(1).fill('540')
-                dialog.get_by_role('spinbutton').nth(1).press('Tab')
-                dialog.screenshot(path=output)
+                dialog.locator('[data-width-code="TITLE"] input').wait_for(state='visible')
+                dialog.locator('[data-column-sizes]').screenshot(path=output)
             finally:
                 browser.close()
     finally:
